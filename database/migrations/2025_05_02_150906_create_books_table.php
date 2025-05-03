@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('buku', function (Blueprint $table) {
-            $table->id('BukuID')->primary()->autoIncrement();
+        Schema::create('books', function (Blueprint $table) {
+            $table->id('BookID')->primary()->autoIncrement();
             $table->timestamps();
-            $table->string('judul');
-            $table->text('konten');
-            $table->string('penulis');
-            $table->string('penerbit');
-            $table->date('tahun_terbit');
-            $table->enum('status', ['Tersedia', 'Tidak_tersedia'])->default('Tersedia');
+            $table->string('title');
+            $table->text('content');
+            $table->string('author');
+            $table->string('publisher');
+            $table->date('publication_date');
+            $table->enum('status', ['Available', 'Not_available'])->default('Available');
         });
     }
 

@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ulasan-buku', function (Blueprint $table) {
-            $table->id('UlasanID')->primary()->autoIncrement();
-            $table->foreignId('BukuID')->constrained('buku', 'BukuID')->onDelete('cascade');
+        Schema::create('reviews', function (Blueprint $table) {
+            $table->id('ReviewID')->primary()->autoIncrement();
+            $table->foreignId('BookID')->constrained('books', 'BookID')->onDelete('cascade');
             $table->foreignId('UserID')->constrained('users', 'id')->onDelete('cascade');
             $table->integer('rating');
-            $table->text('komentar');
+            $table->text('comment');
             $table->timestamps();
         });
     }

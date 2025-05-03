@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('koleksi_pribadi', function (Blueprint $table) {
-            $table->id('KoleksiID')->primary()->autoIncrement();
+        Schema::create('collections', function (Blueprint $table) {
+            $table->id('CollectionID')->primary()->autoIncrement();
             $table->foreignId('UserID')->constrained('users', 'id')->onDelete('cascade');
-            $table->foreignId('BukuID')->constrained('buku', 'BukuID')->onDelete('cascade');
-            $table->string('namaKoleksi')->default('Koleksi Baru');
+            $table->foreignId('BookID')->constrained('books', 'BookID')->onDelete('cascade');
+            $table->string('collectionName')->default('New Collection');
             $table->timestamps();
         });
     }

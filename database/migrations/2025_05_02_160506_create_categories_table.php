@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kategoribuku', function (Blueprint $table) {
-            $table->id('KategoriID')->primary()->autoIncrement();
-            $table->string('namaKategori');
-            $table->text('deskripsi')->nullable();
+        Schema::create('book_categories', function (Blueprint $table) {
+            $table->id('CategoryID')->primary()->autoIncrement();
+            $table->string('categoryName');
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
