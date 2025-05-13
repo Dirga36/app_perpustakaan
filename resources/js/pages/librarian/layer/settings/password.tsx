@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 
-import UserLayout from '@/layouts/user-layout';
+import AdminLayout from '@/pages/admin/layer/app-layout';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -51,7 +51,7 @@ export default function Password() {
     };
 
     return (
-        <UserLayout breadcrumbs={breadcrumbs}>
+        <AdminLayout breadcrumbs={breadcrumbs}>
             <Head title="Profile settings" />
 
             <SettingsLayout>
@@ -125,6 +125,6 @@ export default function Password() {
                     </form>
                 </div>
             </SettingsLayout>
-        </UserLayout>
+        </AdminLayout>
     );
 }

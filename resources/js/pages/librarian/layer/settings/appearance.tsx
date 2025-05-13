@@ -6,8 +6,7 @@ import { /*SharedData*/ type BreadcrumbItem } from '@/types';
 
 import SettingsLayout from '@/layouts/settings/layout';
 
-import UserLayout from '@/layouts/user-layout';
-//import AdminLayout from '@/pages/admin/layer/app-layout';
+import AdminLayout from '@/pages/admin/layer/app-layout';
 //import PustakawanLayout from '@/pages/librarian/layer/user-layout';
 
 const breadcrumbs: BreadcrumbItem[] = [
@@ -27,7 +26,7 @@ export default function Appearance() {
                 : UserLayout;*/
 
     return (
-        <UserLayout breadcrumbs={breadcrumbs}>
+        <AdminLayout breadcrumbs={breadcrumbs}>
             <Head title="Appearance settings" />
 
             <SettingsLayout>
@@ -36,6 +35,6 @@ export default function Appearance() {
                     <AppearanceTabs />
                 </div>
             </SettingsLayout>
-        </UserLayout>
+        </AdminLayout>
     );
 }

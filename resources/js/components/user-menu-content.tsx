@@ -33,10 +33,28 @@ export function UserMenuContent({ user }: UserMenuContentProps) {
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
                 <DropdownMenuItem asChild>
-                    <Link className="block w-full" href={route('profile.edit')} as="button" prefetch onClick={cleanup}>
-                        <Settings className="mr-2" />
-                        Settings
-                    </Link>
+                    {(() => {
+                        let routeName = "";
+                        if (auth.user.role === "PEMINJAM") {
+                            routeName = "profile.edit";
+                        } else if (auth.user.role === "ADMIN") {
+                            routeName = "admin.index";
+                        } else if (auth.user.role === "PUSTAKAWAN") {
+                            routeName = "admin.index";
+                        }
+                        return routeName ? (
+                            <Link
+                                className="block w-full"
+                                href={route(routeName)}
+                                as="button"
+                                prefetch
+                                onClick={cleanup}
+                            >
+                                <Settings className="mr-2" />
+                                Settings
+                            </Link>
+                        ) : null;
+                    })()}
                 </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />

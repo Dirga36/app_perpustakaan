@@ -11,7 +11,7 @@ import { useInitials } from '@/hooks/use-initials';
 import { cn } from '@/lib/utils';
 import { type BreadcrumbItem, type NavItem, type SharedData } from '@/types';
 import { Link, usePage } from '@inertiajs/react';
-import { BookA, BookAIcon, BookAudio, BookCheck, BookOpen, BookOpenIcon, Folder, FolderIcon, LayoutDashboard, LayoutDashboardIcon, LayoutGrid, ListEndIcon, Menu, Search } from 'lucide-react';
+import { BookCheck, BookOpenIcon, FolderIcon, LayoutDashboardIcon, ListEndIcon, Menu } from 'lucide-react';
 import AppLogo from './app-logo';
 import AppLogoIcon from './app-logo-icon';
 
