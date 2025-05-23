@@ -5,7 +5,6 @@ import { Head } from '@inertiajs/react';
 // element
 import Search from '@/components/element/search';
 import Highlight from '@/components/element/highlight';
-import { Pack } from '@/components/element/drawer';
 
 //import LibaryVI from '@/components/element/LIbaryVI'; SVG fail
 
@@ -28,9 +27,6 @@ export default function Dashboard() {
             {/* Placeholder / kotak kosong untuk dashboard content */}
 
             <Highlight />
-
-            <Pack />
-
 
         </AppLayout>
     );
