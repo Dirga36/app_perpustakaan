@@ -101,7 +101,7 @@ export default function Login({ canResetPassword }: LoginProps) {
                                     </TextLink>
                                 )}
                             </div>
-                            <div className="focus-within:border-primary-500 focus-within:ring-primary-500 flex items-center rounded-lg border bg-white shadow-sm focus-within:ring-1 dark:border-2 dark:border-white dark:bg-black">
+                            <div className="relative focus-within:border-primary-500 focus-within:ring-primary-500 flex items-center rounded-lg border bg-white shadow-sm focus-within:ring-1 dark:border-2 dark:border-white dark:bg-black">
                                 <div className="px-3">
                                     <Lock size={18} />
                                 </div>
@@ -112,15 +112,16 @@ export default function Login({ canResetPassword }: LoginProps) {
                                     tabIndex={2}
                                     autoComplete="current-password"
                                     placeholder="Password"
-                                    className="rounded-l-none border-none focus:ring-0"
+                                    className="rounded-l-none border-none focus:ring-0 pr-10"
                                     value={data.password}
                                     onChange={(e) => setData('password', e.target.value)}
                                 />
                                 <button
                                     type="button"
                                     onClick={() => setShowPassword(!showPassword)}
-                                    className="absolute top-1/2 right-3 -translate-y-1/2 transition-colors"
+                                    className="absolute right-3 top-1/2 -translate-y-1/2 transition-colors"
                                     aria-label={showPassword ? 'Sembunyikan password' : 'Tampilkan password'}
+                                    tabIndex={-1}
                                 >
                                     {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                                 </button>

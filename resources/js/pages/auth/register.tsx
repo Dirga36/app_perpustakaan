@@ -1,5 +1,5 @@
 import { Head, useForm } from '@inertiajs/react';
-import { LoaderCircle, Lock, Mail, User } from 'lucide-react';
+import { LoaderCircle, Lock, Mail, RefreshCcwDotIcon, User } from 'lucide-react';
 import { FormEventHandler } from 'react';
 
 import AppLogoIcon from '@/components/app-logo-icon';
@@ -140,7 +140,7 @@ export default function Register() {
                             </Label>
                             <div className="focus-within:border-primary-500 focus-within:ring-primary-500 flex items-center rounded-lg border bg-white shadow-sm focus-within:ring-1 dark:border-2 dark:border-white dark:bg-black">
                                 <div className="text-primary-500 px-3">
-                                    <Lock size={18} />
+                                    <RefreshCcwDotIcon size={18} />
                                 </div>
                                 <Input
                                     id="password_confirmation"

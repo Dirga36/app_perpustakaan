@@ -13,6 +13,9 @@ use App\Http\Middleware\AminMiddleware;
 use App\Http\Middleware\LibrarianMiddleware;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Schedule;
+
+Schedule::command('telescope:prune --hours=48')->daily();
 
 Route::get('/', function () {
     return Inertia::render('welcome');
