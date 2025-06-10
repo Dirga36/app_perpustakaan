@@ -12,8 +12,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Middleware\AminMiddleware;
 use App\Http\Middleware\LibrarianMiddleware;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 use Illuminate\Support\Facades\Schedule;
+use Inertia\Inertia;
 
 Schedule::command('telescope:prune --hours=48')->daily();
 
